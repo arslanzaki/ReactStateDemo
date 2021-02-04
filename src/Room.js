@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 
+import './Room.css';
+
 
 
 function Room() {
@@ -19,8 +21,10 @@ function Room() {
         console.log("Counter Button Clicked")
         setCounter(++counter);
     }
+    // className = {"room "+(isLit ? "lit":"dark")}
 return(
-    <div>This Room is {isLit ? "Lit":"Dark"}
+    <div className={`room ${isLit ? "lit":"dark"}`}>This Room is {isLit ? "Lit":"Dark"}
+    
     <br/>
     <button onClick={updateLit}>Toggle Button</button>
     <br/>
